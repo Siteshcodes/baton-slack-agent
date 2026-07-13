@@ -33,7 +33,7 @@ Every answer is backed by direct links to the original Slack messages, making re
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```text
                                     ┌─────────────────────────┐
@@ -69,7 +69,8 @@ Every answer is backed by direct links to the original Slack messages, making re
                         │  • Handover Generation                     │
                         └───────────────┬────────────────────────────┘
                                         │
-                          Tool Invocation│
+                                Tool Invocation
+                                         │
                     ┌────────────────────┴────────────────────┐
                     │                                         │
                     ▼                                         ▼
@@ -197,7 +198,6 @@ Baton helps volunteer organizations:
 - Architecture — `ARCHITECTURE.md`
 - Deployment — `DEPLOY.md`
 - Testing — `TESTING.md`
-- Submission — `SUBMISSION.md`
 
 ---
 
