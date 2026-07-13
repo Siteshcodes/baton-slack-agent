@@ -1,7 +1,5 @@
 # Baton
 
-# Baton
-
 > 🏆 Slack Agent Builder Challenge 2026
 >
 > AI-powered institutional memory for volunteer-run organizations.
@@ -191,7 +189,8 @@ Generate handover pack for @username
 ---
 
 ## Repository Structure
----
+
+```text
 .
 ├── app.py
 ├── agent.py
@@ -203,8 +202,7 @@ Generate handover pack for @username
 ├── DEPLOY.md
 ├── TESTING.md
 └── .env.example
-
----
+```
 
 ## Project Impact
 
