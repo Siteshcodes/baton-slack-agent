@@ -113,7 +113,6 @@ Every answer is backed by direct links to the original Slack messages, making re
        │ • Citations              │        │ • Knowledge Pack         │
        └──────────────────────────┘        └──────────────────────────┘
 ```
-<img width="1024" height="1024" alt="architecture_diagram" src="https://github.com/user-attachments/assets/f1a1d1a7-a219-48af-a310-4f3813297565" />
 
 ## Tech Stack
 
