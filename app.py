@@ -1,7 +1,16 @@
+"""
+Application entry point for Baton.
+Initializes the Slack Bolt application, validates environment
+configuration, registers the Assistant middleware, and starts
+Socket Mode.
+"""
+
 import logging
 import os
 import sys
+import threading
 
+from flask import Flask
 from dotenv import load_dotenv
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
@@ -14,6 +23,20 @@ logging.basicConfig(
     format="%(asctime)s  %(name)-20s  %(levelname)-8s  %(message)s",
 )
 logger = logging.getLogger(__name__)
+
+web = Flask(__name__)
+
+
+@web.get("/")
+def health():
+    return {
+        "status": "ok",
+        "service": "Baton",
+        "mode": "Socket Mode",
+        "version": "1.0.0",
+    }
+
+
 
 # Startup validation
 REQUIRED_ENV = ["SLACK_BOT_TOKEN", "SLACK_SIGNING_SECRET", "SLACK_APP_TOKEN", "GROQ_API_KEY"]
@@ -37,6 +60,20 @@ app.use(build_assistant())
 
 
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))
+
+    threading.Thread(
+        target=lambda: web.run(
+            host="0.0.0.0",
+            port=port,
+            debug=False,
+            use_reloader=False,
+        ),
+        daemon=True,
+    ).start()
+
+    logger.info("Health endpoint running on port %s", port)
     logger.info("Starting Baton in Socket Mode…")
+
     handler = SocketModeHandler(app, os.environ["SLACK_APP_TOKEN"])
     handler.start()
