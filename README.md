@@ -1,5 +1,13 @@
 # Baton
 
+# Baton
+
+> 🏆 Slack Agent Builder Challenge 2026
+>
+> AI-powered institutional memory for volunteer-run organizations.
+>
+> **Ask questions. Get cited answers. Generate handover packs.**
+
 **Institutional Memory Agent for Volunteer-Run Organizations**
 
 > Every answer backed by receipts. Every handover done right.
@@ -7,6 +15,12 @@
 Built for the **Slack Agent Builder Challenge 2026** (Slack Agent for Good Track).
 
 ---
+
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Slack Bolt](https://img.shields.io/badge/Slack-Bolt-4A154B)
+![Groq](https://img.shields.io/badge/Groq-Llama3.3-green)
+![Railway](https://img.shields.io/badge/Deploy-Railway-purple)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## Overview
 
@@ -101,6 +115,7 @@ Every answer is backed by direct links to the original Slack messages, making re
        │ • Citations              │        │ • Knowledge Pack         │
        └──────────────────────────┘        └──────────────────────────┘
 ```
+<img width="1024" height="1024" alt="architecture_diagram" src="https://github.com/user-attachments/assets/f1a1d1a7-a219-48af-a310-4f3813297565" />
 
 ## Tech Stack
 
@@ -147,7 +162,18 @@ Run the application.
 ```bash
 python app.py
 ```
+## Live Deployment
 
+Health Endpoint
+
+https://your-app.up.railway.app/
+
+Status
+
+{
+  "status":"ok",
+  "service":"Baton"
+}
 ---
 
 ## Example Questions
@@ -165,20 +191,18 @@ Generate handover pack for @username
 ---
 
 ## Repository Structure
-
-```
-app.py
-agent.py
-handlers.py
-
-manifest.json
-requirements.txt
-
-README.md
-ARCHITECTURE.md
-DEPLOY.md
-TESTING.md
-```
+---
+.
+├── app.py
+├── agent.py
+├── handlers.py
+├── manifest.json
+├── requirements.txt
+├── README.md
+├── ARCHITECTURE.md
+├── DEPLOY.md
+├── TESTING.md
+└── .env.example
 
 ---
 
