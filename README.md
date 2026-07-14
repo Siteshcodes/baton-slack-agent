@@ -167,10 +167,7 @@ https://web-production-af0ee.up.railway.app/
 
 Status
 
-{
-  "status":"ok",
-  "service":"Baton"
-}
+{"mode":"Socket Mode","service":"Baton","status":"ok","version":"1.0.0"}
 ---
 
 ## Example Questions
