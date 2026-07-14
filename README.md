@@ -163,7 +163,7 @@ python app.py
 
 Health Endpoint
 
-https://your-app.up.railway.app/
+https://web-production-af0ee.up.railway.app/
 
 Status
 
